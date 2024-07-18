@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bora</title>
+    
+</head>
+<style>
+    h1 {
+            font-family: ''Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 48px;
+            color: #FFFFFF; /*  */
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Estilo para o fundo do site */
+        
+        body {
+            background-image: url('kogos-paulo-kogos.gif'); /*  */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            padding: 20px;
+            margin: 0;
+            min-height: 100vh; /* Garante que o fundo ocupe toda a altura da tela */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative; /* Necessário para sobreposição */
+            overflow: hidden; /* Impede que a sobreposição gere barras de rolagem */
+            background-blend-mode: overlay; /* Mescla a cor de sobreposição com a imagem de fundo */
+            background-color: rgba(0, 0, 0, 0.7); /* Cor preta com 50% de opacidade */
+        }
+        
+        /* Estilos para o botão */
+        #sim {
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            background-color: #ffff00 ;
+            color: black ;
+            cursor: pointer;
+            border-radius: 10%;
+            border:none;
+        }
+        #nao {
+            position: absolute;
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            background-color: #DC143C ;
+            color: white;
+            cursor: pointer;
+            border-radius: 10%;
+            border:none;
+        }
+    </style>
+
+<body>
+    <h1>teste seu conhecimento: qual a ideologia da famosa Lara Aléxia, dona da celebre frase  “cadê a matéria de beijo grego I”?</h1>
+    <form action="acertok.html">
+        <button type="submit" id="sim">ANCAP</button>
+    </form>
+    <button id="nao" onmouseover="moverBotao()">esquerdalha petista socialista</button>
+    
+</body>
+
+<script>
+    function moverBotao() {
+        let largura = window.innerWidth;
+        let altura = window.innerHeight;
+
+        let randomX = Math.floor(Math.random() * (largura - 100)); // 100 é a largura do botão
+        let randomY = Math.floor(Math.random() * (altura - 40)); // 40 é a altura do botão
+
+            // Define a nova posição do botão
+        document.getElementById("nao").style.left = randomX + "px";
+        document.getElementById("nao").style.top = randomY + "px";
+    }
+</script>
+</html>
